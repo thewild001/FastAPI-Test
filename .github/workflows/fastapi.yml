@@ -2,9 +2,9 @@ name: FastAPI CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, fonoma-test]
   pull_request:
-    branches: [main]
+    branches: [main, fonoma-test]
 
 jobs:
   build:
@@ -41,4 +41,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi-test:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/fastapi-test-solution:latest
