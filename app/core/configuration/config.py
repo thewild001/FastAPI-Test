@@ -23,7 +23,8 @@ def get_application() -> FastAPI:
         title=PROJECT_NAME,
         description=PROJECT_DESC,
         version=VERSION,
-        openapi_tags=tags_metadata)
+       # openapi_tags=tags_metadata
+        )
    
     app.add_middleware(
         CORSMiddleware,

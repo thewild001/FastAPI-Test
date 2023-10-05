@@ -10,7 +10,7 @@ class Settings(BaseSettings):
 
     project_name: str = os.getenv('PROJECT_NAME', default="Fonoma Backend Developer Test")
     project_desc: str = os.getenv('PROJECT_DESC', default="Fonoma Backend Developer Test")
-    project_version: str = os.getenv('VERSION', default="0.0.1")
+    project_version: str = os.getenv('VERSION', default="1.0.0")
     api_prefix: str = os.getenv('API_PREFIX', default="/api/v1")
    
     redis_host: str = os.getenv('REDIS_HOST', default="localhost")
