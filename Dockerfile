@@ -12,3 +12,6 @@ WORKDIR /app
 COPY . .
 
 VOLUME /app
+
+CMD ["uvicorn", "app.api.server:app", "--reload", "--proxy-headers", "--host", "0.0.0.0", "--port", "8000"]
+
