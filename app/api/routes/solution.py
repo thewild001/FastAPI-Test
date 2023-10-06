@@ -1,5 +1,4 @@
 from datetime import timedelta
-from typing import List, Optional
 from fastapi import APIRouter, status, Request, Response, Body
 from app.models import order as orderModel
 from app.services import service_order
