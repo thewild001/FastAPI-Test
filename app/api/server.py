@@ -1,7 +1,4 @@
-from datetime import timedelta
-
 from fastapi import FastAPI
-from fastapi_redis_cache import cache
 
 from app.core.configuration import config, swagger
 
@@ -17,8 +14,7 @@ app.include_router(api_router)
 
 
 @app.get("/")
-@cache(expire=timedelta(minutes=5))
-def get_data():
+def index():
     return {"message": "Fonoma - Backend Developer Test!"}
 
     
